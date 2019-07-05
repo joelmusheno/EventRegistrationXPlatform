@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SoS.Models;
 
-namespace gymtest.Services
+namespace SoS.Services
 {
     public class MockRegistrationDataStore : IDataStore<EventRegistration>
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using gymtest.Models;
+using SoS.Models;
 
-namespace gymtest.Services
+namespace SoS.Services
 {
     public class MockAllEventDataStore : IDataStore<InstructorLedEvent>
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using gymtest.Models;
+using SoS.Models;
 
-namespace gymtest.Services
+namespace SoS.Services
 {
     public interface IGroupingEventsService
     {

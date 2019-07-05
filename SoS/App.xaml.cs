@@ -1,8 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using SoS.Services;
-using SoS.Views;
+﻿using Xamarin.Forms;
 
 namespace SoS
 {

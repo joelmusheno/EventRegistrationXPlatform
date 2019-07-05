@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using gymtest.Models;
+using SoS.Models;
 
-namespace gymtest.Services
+namespace SoS.Services
 {
     public interface IDataStore<T>  where T: IBaseEvent
     {

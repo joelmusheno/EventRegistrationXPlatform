@@ -1,5 +1,5 @@
 ﻿using System;
-namespace gymtest.Models
+namespace SoS.Models
 {
     public class InstructorLedEvent : BaseEvent
     {

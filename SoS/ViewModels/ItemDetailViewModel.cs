@@ -4,12 +4,12 @@ using SoS.Models;
 
 namespace SoS.ViewModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class ItemDetailViewModel<T> : BaseViewModel where T : IBaseEvent
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public T Item { get; set; }
+        public ItemDetailViewModel(T item)
         {
-            Title = item?.Text;
+            Title = item.Name;
             Item = item;
         }
     }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using gymtest.Models;
+using SoS.Models;
 
-namespace gymtest.Services
+namespace SoS.Services
 {
     public class GroupingEventsService : IGroupingEventsService
     {

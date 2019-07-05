@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace gymtest.Models
+namespace SoS.Models
 {
     public class DayGroupedEventList : List<IBaseEvent>
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace gymtest.Models
+namespace SoS.Models
 {
     public enum MenuItemType
     {

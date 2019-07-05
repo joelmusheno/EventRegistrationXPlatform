@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,18 +11,19 @@ namespace SoS.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    [DesignTimeVisible(true)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public InstructorLedEvent Event { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Event = new InstructorLedEvent
             {
-                Text = "Item name",
+                Id = -1,
+                Name = "Item name",
                 Description = "This is an item description."
             };
 
@@ -30,7 +32,7 @@ namespace SoS.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            MessagingCenter.Send(this, "AddItem", Event);
             await Navigation.PopModalAsync();
         }
 
