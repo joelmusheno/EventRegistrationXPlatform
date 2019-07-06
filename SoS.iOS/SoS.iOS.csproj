@@ -123,6 +123,7 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\customappfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -142,5 +143,8 @@
       <Project>{8AD07EDC-97B1-4C12-A9CD-7A9F4EECF97C}</Project>
       <Name>SoS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>
