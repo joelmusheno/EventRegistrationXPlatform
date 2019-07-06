@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using SoS.Models;
-using SoS.Views;
 using SoS.ViewModels;
-using SoS.Services;
 
 namespace SoS.Views
 {

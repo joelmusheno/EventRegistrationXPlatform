@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using SoS.Services;
+using Xamarin.Forms;
 
 namespace SoS
 {
@@ -8,6 +9,11 @@ namespace SoS
         public App()
         {
             InitializeComponent();
+
+            DependencyService.Register<MockAllEventDataStore>();
+            DependencyService.Register<MockRegistrationDataStore>();
+            DependencyService.Register<GroupingEventsService>();
+
             MainPage = new AppShell();
         }
 
