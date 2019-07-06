@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Style x:Key="Glyphs" TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource CustomGlyphFont}" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="WidthRequest" Value="40" />
+    </Style>            
+    
+    <Style x:Key="IconHeart" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe800;" />
+    </Style>
+    <Style x:Key="IconHeartBreak" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xf028;" />
+    </Style>
+    <Style x:Key="IconOk" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe801;" />
+    </Style>
+    <Style x:Key="IconOkCircled" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe801;" />
+    </Style>
+    <Style x:Key="IconCancelCircled" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xf06e;" />
+    </Style>
+    <Style x:Key="IconCancel" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe802;" />
+    </Style>
+    <Style x:Key="IconHelpCircledAlt" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe803;" />
+    </Style>
+    <Style x:Key="IconHelpCircled" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe804;" />
+    </Style>
+    <Style x:Key="IconWater3Drops" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe805;" />
+    </Style>
+    <Style x:Key="IconWater1Drop" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe806;" />
+    </Style>
+    <Style x:Key="IconAir" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe807;" />
+    </Style>
+    <Style x:Key="IconFlash" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe808;" />
+    </Style>
+    <Style x:Key="IconMail" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe809;" />
+    </Style>
+    <Style x:Key="IconSpiner1" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe830;" />
+    </Style>
+    <Style x:Key="IconSOS" BasedOn="{StaticResource Glyphs}" TargetType="Label">
+        <Setter Property="Text" Value="&#xe80a;" />
+    </Style>
+</ResourceDictionary>
