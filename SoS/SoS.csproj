@@ -17,4 +17,18 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\AppShell.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\AppShell.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\EventDetailPage.xaml.cs">
+      <DependentUpon>EventDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RegistrationDetailPage.xaml.cs">
+      <DependentUpon>RegistrationDetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

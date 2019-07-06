@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:local="clr-namespace:SoS.Views" Title="SoS" x:Class="SoS.AppShell">
+<Shell 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="clr-namespace:SoS.Controls"
+    xmlns:views="clr-namespace:SoS.Views"
+    mc:Ignorable="d" 
+    xmlns:local="clr-namespace:SoS.Views" 
+    Title="SoS" 
+    x:Class="SoS.AppShell"
+    FlyoutBehavior="Flyout"
+    FlyoutHeaderBehavior="CollapseOnScroll">
     <!-- 
         Styles and Resources 
     -->
@@ -20,6 +32,27 @@
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
+    
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Current Registrations"
+                Icon="tab_feed.png">
+        <Tab>
+            <ShellContent>
+                <views:CurrentRegistrationsPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="About"
+                Icon="tab_about.png">
+        <Tab>
+            <ShellContent>
+                <views:AboutPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>    
+    
     <!-- Your Pages -->
     <TabBar>
         <Tab Title="Current Registrations" Icon="tab_feed.png">
@@ -29,6 +62,8 @@
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </TabBar>
+    
+
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 

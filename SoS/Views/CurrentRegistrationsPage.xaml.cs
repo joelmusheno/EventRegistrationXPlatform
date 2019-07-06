@@ -17,19 +17,18 @@ namespace SoS.Views
             InitializeComponent();
             BindingContext = ViewModel = new CurrentRegistrationsViewModel();
             registrationsListView.ItemsSource = ViewModel.Events;
+            registrationsListView.ItemSelected += OnItemSelected;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            if (!(args.SelectedItem is InstructorLedEvent item))
+            if (!(args.SelectedItem is EventRegistration selectedRegistration))
                 return;
 
-            var evd = new ItemDetailViewModel<IBaseEvent>(item);
-
-            await Navigation.PushAsync(new EventDetailPage(evd));
+            await Shell.Current.GoToAsync($"{nameof(RegistrationDetailPage)}?registrationId={selectedRegistration.Id}");
 
             // Manually deselect item.
-            // ItemsListView.SelectedItem = null;
+            registrationsListView.SelectedItem = null;
         }
 
         protected override void OnAppearing()
