@@ -30,6 +30,9 @@
                 <Setter Property="Shell.TabBarTitleColor" Value="White" />
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            
+            
+            
         </ResourceDictionary>
     </Shell.Resources>
     
