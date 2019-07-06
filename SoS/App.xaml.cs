@@ -1,6 +1,7 @@
 ﻿using SoS.Services;
 using Xamarin.Forms;
 
+
 namespace SoS
 {
     public partial class App : Application
