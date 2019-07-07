@@ -2,10 +2,17 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SoS.Controls.FlyoutHeader"
+             xmlns:local="clr-namespace:SoS"
              HeightRequest="200">
-    <ContentView.Resources>
-        <ResourceDictionary Source="../Resources/Glyphs.xaml" />
-    </ContentView.Resources>
+<!--    <ContentView.Resources>
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <local:SoS.Resources.Glyphs />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </ContentView.Resources>-->
     <Grid BackgroundColor="Black">
 
         <Label Text="&#xe80a;" 
@@ -15,5 +22,6 @@
                VerticalTextAlignment="Center"
                Margin="20"
                FontFamily="{DynamicResource CustomGlyphFontName}" />
+        <!--<Label Text="{StaticResource IconSoS}" />-->
     </Grid>
 </ContentView>
