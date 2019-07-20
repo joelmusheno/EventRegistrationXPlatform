@@ -19,9 +19,7 @@ namespace SoS.Views
         public RegistrationDetailPage()
         {
             InitializeComponent();
-
-            EventRegistrationDataStore = DependencyService.Get<IDataStore<EventRegistration>>()
-                ?? new MockRegistrationDataStore();
+            EventRegistrationDataStore = DependencyService.Get<IDataStore<EventRegistration>>();
         }
 
         protected override async void OnAppearing()

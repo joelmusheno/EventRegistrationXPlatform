@@ -10,68 +10,9 @@ namespace SoS.Services
     {
         internal readonly List<InstructorLedEvent> Items;
 
-        public MockAllEventDataStore()
+        public MockAllEventDataStore(IDatabase database) 
         {
-            Items = new List<InstructorLedEvent>();
-            var mockItems = new List<InstructorLedEvent>
-            {
-                new InstructorLedEvent 
-                {   Id = 1, 
-                    Name = "First item", 
-                    Description="This is an item description.", 
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-                },
-                new InstructorLedEvent 
-                { 
-                    Id = 2, 
-                    Name = "Second item", 
-                    Description="This is an item description.",
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-
-                },
-                new InstructorLedEvent
-                {
-                    Id = 3,
-                    Name = "Third item",
-                    Description="This is an item description.",
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-
-                },
-                new InstructorLedEvent
-                {
-                    Id = 4,
-                    Name = "Fouth item",
-                    Description="This is an item description.",
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-
-                },
-                new InstructorLedEvent
-                {
-                    Id = 5,
-                    Name = "Fifth item",
-                    Description="This is an item description.",
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-
-                },
-                new InstructorLedEvent
-                {
-                    Id = 6,
-                    Name = "Sixth item",
-                    Description="This is an item description.",
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddHours(1)
-                },
-            };
-
-            foreach (var item in mockItems)
-            {
-                Items.Add(item);
-            }
+            Items = (List<InstructorLedEvent>)database.Events;
         }
 
         public async Task<bool> AddItemAsync(InstructorLedEvent item)

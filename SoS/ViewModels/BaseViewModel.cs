@@ -13,10 +13,10 @@ namespace SoS.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<InstructorLedEvent> EventDataStore => 
-            DependencyService.Get<IDataStore<InstructorLedEvent>>() ?? new MockAllEventDataStore();
+            DependencyService.Get<IDataStore<InstructorLedEvent>>();
 
         public IDataStore<EventRegistration> RegistrationDataStore =>
-            DependencyService.Get<IDataStore<EventRegistration>>() ?? new MockRegistrationDataStore();
+            DependencyService.Get<IDataStore<EventRegistration>>();
 
         bool isBusy = false;
         public bool IsBusy

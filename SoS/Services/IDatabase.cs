@@ -11,5 +11,7 @@ namespace SoS.Services
         IList<EventRegistration> EventRegistrations { get; }
         IList<Instructor> Instructors { get; }
         IList<Seat> Seats { get; }
+
+        IList<T> GetBaseModelTable<T>() where T : IBaseModel;
     }
 }
