@@ -11,31 +11,9 @@ namespace SoS.Services
 
         internal readonly List<EventRegistration> Items;
 
-        public MockRegistrationDataStore()
+        public MockRegistrationDataStore(IDatabase database)
         {
-            Items = new List<EventRegistration>();
-            var mockItems = new List<EventRegistration>
-            {
-                new EventRegistration
-                {   Id = 1,
-                    Name = "First item",
-                    StartDate = DateTime.Now.AddHours(1),
-                    EndDate = DateTime.Now.AddHours(2),
-                    Seat = 11
-                },
-                new EventRegistration
-                {   Id = 2,
-                    Name = "Second item",
-                    StartDate = DateTime.Now.AddDays(1).AddHours(1),
-                    EndDate = DateTime.Now.AddDays(1).AddHours(2),
-                    Seat = 11
-                },
-            };
-
-            foreach (var item in mockItems)
-            {
-                Items.Add(item);
-            }
+            Items = (List<EventRegistration>)database.EventRegistrations;
         }
 
         public async Task<bool> AddItemAsync(EventRegistration item)

@@ -14,6 +14,7 @@ namespace SoS
             DependencyService.Register<MockAllEventDataStore>();
             DependencyService.Register<MockRegistrationDataStore>();
             DependencyService.Register<GroupingEventsService>();
+            DependencyService.Register<IDatabase, MockDatabase>();
 
             MainPage = new AppShell();
         }

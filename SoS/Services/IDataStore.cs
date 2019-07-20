@@ -4,7 +4,7 @@ using SoS.Models;
 
 namespace SoS.Services
 {
-    public interface IDataStore<T>  where T: IBaseEvent
+    public interface IDataStore<T>  where T: IBaseModel
     {
         Task<bool> AddItemAsync(T item);
         Task<bool> UpdateItemAsync(T item);

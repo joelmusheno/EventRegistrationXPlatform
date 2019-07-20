@@ -1,9 +1,6 @@
-﻿using System;
-
-
-namespace SoS.Models
+﻿namespace SoS.Models
 {
-    public class Instructor : IBaseModel
+    public class Seat : IBaseModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
