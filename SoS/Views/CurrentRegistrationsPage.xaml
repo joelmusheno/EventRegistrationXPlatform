@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="SoS.Views.CurrentRegistrationsPage"
-             Title="{Binding Title}" 
-             x:Name="currentRegistrationsPage">
+<Page:ViewModelBasedContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Page="clr-namespace:SoS.Views; assembly=SoS"
+            x:Class="SoS.Views.CurrentRegistrationsPage"
+            xmlns:viewmodels="clr-namespace:SoS.ViewModels;assembly=SoS"
+            x:TypeArguments="viewmodels:CurrentRegistrationsViewModel" 
+            Title="{Binding Title}"
+            x:Name="currentRegistrationsPage">
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="registrationsListView"
@@ -39,4 +42,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</Page:ViewModelBasedContentPage>

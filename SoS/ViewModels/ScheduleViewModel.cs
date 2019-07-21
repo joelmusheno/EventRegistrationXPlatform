@@ -5,19 +5,24 @@ using SoS.Models;
 using SoS.ViewModels;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using SoS.Services;
 
 namespace SoS
 {
-    public class ScheduleViewModel:BaseViewModel
+    public class ScheduleViewModel : BaseViewModel
     {
         public ObservableCollection<InstructorLedEvent> Events { get; set; }
         public Command LoadItemsCommand { get; set; }
+        protected IDataStore<InstructorLedEvent> EventDataStore { get; }
 
-        public ScheduleViewModel()
+        public ScheduleViewModel(IDataStore<InstructorLedEvent> eventDataStore)
         {
+            EventDataStore = eventDataStore;
+
             Title = "Schedule";
             Events = new ObservableCollection<InstructorLedEvent>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+
         }
 
         async Task ExecuteLoadItemsCommand()

@@ -15,9 +15,14 @@ namespace SoS.ViewModels
     {
         public ObservableCollection<DayGroupedEventList> Events { get; set; }
         public Command LoadItemsCommand { get; set; }
+        protected IGroupingEventsService GroupingEventsService { get; }
+        protected IDataStore<EventRegistration> EventRegistrations { get; }
 
-        public CurrentRegistrationsViewModel()
+        public CurrentRegistrationsViewModel(IGroupingEventsService groupingEventsService, IDataStore<EventRegistration> eventRegistrations)
         {
+            EventRegistrations = eventRegistrations;
+            GroupingEventsService = groupingEventsService;
+
             Title = "Registrations";
             Events = new ObservableCollection<DayGroupedEventList>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
@@ -29,6 +34,8 @@ namespace SoS.ViewModels
                 //Events.Add(newItem);
                 //await EventDataStore.AddItemAsync(newItem);
             });
+            
+            
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -41,9 +48,8 @@ namespace SoS.ViewModels
             try
             {
                 Events.Clear();
-                var events = await RegistrationDataStore.GetItemsAsync(true);
-                var groupedEvents = 
-                    DependencyService.Get<IGroupingEventsService>().GetDayGroupings(events);
+                var events = await EventRegistrations.GetItemsAsync(true);
+                var groupedEvents = GroupingEventsService.GetDayGroupings(events);
 
                 foreach (var ge in groupedEvents)
                     Events.Add(ge);

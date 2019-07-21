@@ -7,17 +7,12 @@ using Xamarin.Forms;
 
 using SoS.Models;
 using SoS.Services;
+using Autofac;
 
 namespace SoS.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged, IBaseViewModel
     {
-        public IDataStore<InstructorLedEvent> EventDataStore => 
-            DependencyService.Get<IDataStore<InstructorLedEvent>>();
-
-        public IDataStore<EventRegistration> RegistrationDataStore =>
-            DependencyService.Get<IDataStore<EventRegistration>>();
-
         bool isBusy = false;
         public bool IsBusy
         {

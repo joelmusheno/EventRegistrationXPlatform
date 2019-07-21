@@ -19,8 +19,7 @@ namespace SoS.Views
 
         public EventDetailPage()
         {
-            EventDataStore = DependencyService.Get<IDataStore<InstructorLedEvent>>()
-                ?? new MockAllEventDataStore();
+            EventDataStore = DependencyService.Get<IDataStore<InstructorLedEvent>>();
         }
 
         protected override async void OnAppearing()

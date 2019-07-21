@@ -46,7 +46,7 @@ namespace SoS.Services
 
         public async Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(Items);
+            return await Task.FromResult(Items as IEnumerable<T>);
         }
     }
 }

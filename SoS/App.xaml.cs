@@ -1,15 +1,23 @@
-﻿using SoS.Services;
+﻿using System;
+using System.Collections.Generic;
+using Autofac;
+using Autofac.Core;
+using SoS.Services;
 using Xamarin.Forms;
-
+using Xamarin.Forms.Internals;
 
 namespace SoS
-{
+{   
     public partial class App : Application
     {
+        public static IContainer container;
+        static readonly ContainerBuilder builder = new ContainerBuilder();
 
-        public App()
+        public App(AppSetup setup)
         {
             InitializeComponent();
+
+            AppContainer.Container = setup.CreateContainer();
 
             MainPage = new AppShell();
         }

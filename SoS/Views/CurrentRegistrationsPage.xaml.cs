@@ -8,14 +8,12 @@ namespace SoS.Views
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
-    public partial class CurrentRegistrationsPage : ContentPage
+    public partial class CurrentRegistrationsPage : ViewModelBasedContentPage<CurrentRegistrationsViewModel>
     {
-        CurrentRegistrationsViewModel ViewModel;
-
         public CurrentRegistrationsPage()
         {
             InitializeComponent();
-            BindingContext = ViewModel = new CurrentRegistrationsViewModel();
+                        
             registrationsListView.ItemsSource = ViewModel.Events;
             registrationsListView.ItemSelected += OnItemSelected;
         }

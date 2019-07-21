@@ -196,5 +196,23 @@ namespace SoS.Services
                 },
             };
         }
+
+        public IList<T> GetBaseModelTable<T>() where T : IBaseModel
+        {
+            if (typeof(T) == typeof(InstructorLedEvent))
+                return (IList<T>)events;
+            if (typeof(T) == typeof(Session))
+                return (IList<T>)sessions;
+            if (typeof(T) == typeof(Location))
+                return (IList<T>)locations;
+            if (typeof(T) == typeof(EventRegistration))
+                return (IList<T>)eventRegistrations;
+            if (typeof(T) == typeof(Instructor))
+                return (IList<T>)instructors;
+            if (typeof(T) == typeof(Seat))
+                return (IList<T>)seats;
+
+            throw new Exception("Could not find.");
+        }
     }
 }
