@@ -1,10 +1,15 @@
 ﻿using System;
+using Autofac;
+
 namespace SoS.Droid
 {
-    public class Setup
+    public class Setup : AppSetup
     {
-        public Setup()
+        protected override void RegisterDependencies(ContainerBuilder cb)
         {
+            base.RegisterDependencies(cb);
+
+            //cb.RegisterType<DroidHelloFormsService>().As<IHelloFormsService>();
         }
     }
 }
