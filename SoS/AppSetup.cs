@@ -24,6 +24,7 @@ namespace SoS
             // Register View Models
             cb.RegisterType<CurrentRegistrationsViewModel>().SingleInstance();
             cb.RegisterType<AboutViewModel>().SingleInstance();
+            cb.RegisterType<ItemDetailViewModel>().SingleInstance();
             
         }
         

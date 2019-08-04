@@ -11,25 +11,20 @@ namespace SoS.Views
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
     [QueryProperty(nameof(EventId), "id")]
-    public partial class EventDetailPage : ContentPage
+    public partial class EventDetailPage : ViewModelBasedContentPage<ItemDetailViewModel>
     {
-        private ItemDetailViewModel<IBaseEvent> _viewModel;
-        protected readonly IDataStore<InstructorLedEvent> EventDataStore;
-        public int EventId { get; set; }
+        public string EventId { get; set; }
 
         public EventDetailPage()
         {
-            EventDataStore = DependencyService.Get<IDataStore<InstructorLedEvent>>();
+            InitializeComponent();
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            var eventItem = await EventDataStore.GetItemAsync(EventId);
-
-            _viewModel = new ItemDetailViewModel<IBaseEvent>(eventItem);
-            BindingContext = _viewModel;
+            if (int.TryParse(EventId, out var eventId))
+                await ViewModel.LoadEvent(eventId);
         }
     }
 }

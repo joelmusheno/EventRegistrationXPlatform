@@ -7,7 +7,7 @@ namespace SoS.Views
 {   
     public class ViewModelBasedContentPage<T> : ContentPage where T: IBaseViewModel
     {
-        public T ViewModel { get; }
+        public T ViewModel { get; set;  }
 
         public ViewModelBasedContentPage()
         {

@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Page:ViewModelBasedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Page="clr-namespace:SoS.Views;assembly=SoS"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:viewmodels="clr-namespace:SoS.ViewModels;assembly=SoS"
+             x:TypeArguments="viewmodels:ItemDetailViewModel" 
              x:Class="SoS.Views.RegistrationDetailPage" 
              Title="{Binding Title}"
              Padding="20"
@@ -16,4 +19,4 @@
             StringFormat={StaticResource formattimewithoutseconds}}"
             LineBreakMode="NoWrap" />
     </StackLayout>
-</ContentPage>
+</Page:ViewModelBasedContentPage>
