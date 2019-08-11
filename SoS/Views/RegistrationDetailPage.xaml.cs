@@ -23,7 +23,6 @@ namespace SoS.Views
             base.OnAppearing();
             if (int.TryParse(RegistrationId, out var registrationId))
                 await ViewModel.LoadRegistration(registrationId);
-                       
         }
     }
 }

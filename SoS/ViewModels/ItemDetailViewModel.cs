@@ -7,9 +7,15 @@ namespace SoS.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel 
     {
-        public IBaseEvent Item { get; set; }
         private IDataStore<EventRegistration> _eventRegistrations;
         private readonly IDataStore<InstructorLedEvent> _eventDataStore;
+
+        private IBaseEvent _item;
+        public IBaseEvent Item
+        {
+            get => _item;
+            set => SetProperty(ref _item, value);
+        }
 
         public ItemDetailViewModel(IDataStore<EventRegistration> eventRegistrations,
             IDataStore<InstructorLedEvent> eventDataStore)

@@ -11,7 +11,7 @@
              ios:Page.UseSafeArea="true">
     <StackLayout Spacing="20" Padding="15">
 
-        <Label Text="Seat: {Binding Item.Seat.Location}" FontSize="Medium" />
+        <Label Text="{Binding Item.Seat.Name}" FontSize="Medium" />
         <Label Text="{Binding Item.StartDate, 
             StringFormat={StaticResource formatdatetimewithoutseconds}}"
             LineBreakMode="NoWrap" />
