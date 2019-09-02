@@ -1,5 +1,6 @@
 ﻿using System;
 using Autofac;
+using CarouselView.FormsPlugin.Android;
 
 namespace SoS.Droid
 {
@@ -10,6 +11,7 @@ namespace SoS.Droid
             base.RegisterDependencies(cb);
 
             //cb.RegisterType<DroidHelloFormsService>().As<IHelloFormsService>();
+            CarouselViewRenderer.Init();
         }
     }
 }
