@@ -11,9 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -31,6 +32,9 @@
     </Compile>
     <Compile Update="Views\RegistrationDetailPage.xaml.cs">
       <DependentUpon>RegistrationDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CourseTypePage.xaml.cs">
+      <DependentUpon>CourseTypePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

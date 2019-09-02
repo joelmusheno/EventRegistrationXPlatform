@@ -15,6 +15,7 @@ namespace SoS
         {
             InitializeComponent();
             RegisterRoutes();
+            RegisterNavigationItems();
             BindingContext = this;
         }
 
@@ -24,9 +25,16 @@ namespace SoS
             routes.Add(nameof(AboutPage), typeof(AboutPage));
             routes.Add(nameof(EventDetailPage), typeof(EventDetailPage));
             routes.Add(nameof(RegistrationDetailPage), typeof(RegistrationDetailPage));
+            routes.Add(nameof(SchedulePage), typeof(SchedulePage));
+            routes.Add(nameof(CourseTypePage), typeof(CourseTypePage));
 
             foreach (var item in routes)
                 Routing.RegisterRoute(item.Key, item.Value);
+        }
+
+        void RegisterNavigationItems()
+        {
+            
         }
 
         void OnNavigating(object sender, ShellNavigatingEventArgs e)

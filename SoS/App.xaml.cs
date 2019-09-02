@@ -20,6 +20,7 @@ namespace SoS
             AppContainer.Container = setup.CreateContainer();
 
             MainPage = new AppShell();
+
         }
 
         protected override void OnStart()

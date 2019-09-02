@@ -47,6 +47,14 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Course Types"
+                Icon="tab_feed.png">
+        <Tab>
+            <ShellContent>
+                <views:CourseTypePage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
     <FlyoutItem Title="About"
                 Icon="tab_about.png">
         <Tab>
@@ -59,6 +67,9 @@
     <!-- Your Pages -->
     <TabBar>
         <Tab Title="Current Registrations" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CurrentRegistrationsPage}" />
+        </Tab>
+        <Tab Title="Course Types" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:CurrentRegistrationsPage}" />
         </Tab>
         <Tab Title="About" Icon="tab_about.png">

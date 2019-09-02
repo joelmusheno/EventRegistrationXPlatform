@@ -25,7 +25,7 @@ namespace SoS
             cb.RegisterType<CurrentRegistrationsViewModel>().SingleInstance();
             cb.RegisterType<AboutViewModel>().SingleInstance();
             cb.RegisterType<ItemDetailViewModel>().SingleInstance();
-            
+            cb.RegisterType<CourseTypeViewModel>().SingleInstance();
         }
         
     }
