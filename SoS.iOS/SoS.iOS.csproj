@@ -70,6 +70,9 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Renderers\RoundedContentViewRenderer.cs" />
+    <Compile Include="Renderers\BaseContentPageRenderer.cs" />
+    <Compile Include="Renderers\CarouselScrollViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -152,5 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
 </Project>

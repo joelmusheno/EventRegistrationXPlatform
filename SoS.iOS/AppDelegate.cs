@@ -27,6 +27,7 @@ namespace SoS.iOS
 
             LoadApplication(new App(new Setup()));
             CarouselViewRenderer.Init();
+            UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.Default, false);
 
             return base.FinishedLaunching(app, options);
         }

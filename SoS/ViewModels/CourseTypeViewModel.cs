@@ -43,7 +43,7 @@ namespace SoS.ViewModels
                 var next = CarouselItems.Count > i + 1 ? CarouselItems[i + 1] : null;
 
                 if (next != null)
-                    CreateColors.SetGradients(current.BackgroundColor, next.BackgroundColor, 100).ToList().ForEach(x => _backgroundColors.Add(x));
+                    _backgroundColors.AddRange(CreateColors.SetGradients(current.BackgroundColor, next.BackgroundColor, 100));
                 else
                     _backgroundColors.Add(current.BackgroundColor);
             }
